@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en" data-base="">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Sign in — Mentora Learning Centre</title>
+<meta name="description" content="Mentora Learning Centre, Negombo — tuition classes for Grades 6–13 in English and Tamil medium, online and physical.">
+<meta name="theme-color" content="#2563EB">
+<script>try{if(JSON.parse(localStorage.getItem('mentora-theme'))==='dark'){document.documentElement.dataset.theme='dark';document.documentElement.setAttribute('data-bs-theme','dark');}}catch(e){}</script>
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="assets/icons/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Noto+Sans+Tamil:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" crossorigin="anonymous">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/components.css">
+</head>
+<body class="auth-body">
+<main id="main" class="auth-wrap">
+  <div class="auth-card">
+    <div class="d-flex justify-content-between align-items-center mb-4"><div id="loginBrand"></div><div id="loginLang"></div></div>
+    <h1 class="h3 mb-1" data-i18n="login.title">Sign in</h1>
+    <p class="text-muted small mb-4" data-i18n="login.lead">Students, admin and cashier staff sign in here.</p>
+    <form id="loginForm" novalidate>
+      <div class="mb-3"><label class="form-label" for="email" data-i18n="login.email">Email</label>
+        <input class="form-control" type="email" id="email" name="email" autocomplete="email" required>
+        <div class="invalid-feedback" data-i18n="validation.email">Enter a valid email address.</div></div>
+      <div class="mb-2"><label class="form-label" for="password" data-i18n="login.password">Password</label>
+        <input class="form-control" type="password" id="password" name="password" autocomplete="current-password" required minlength="6">
+        <div class="invalid-feedback" data-i18n="validation.password">Password must be at least 6 characters.</div></div>
+      <div class="text-end mb-3"><button type="button" class="btn btn-link btn-sm px-0" id="forgotBtn" data-i18n="login.forgot">Forgot password?</button></div>
+      <button class="btn btn-primary w-100 btn-lg" type="submit" data-i18n="login.submit">Sign in</button>
+    </form>
+    <p class="small text-muted mt-4 mb-0" data-i18n="login.noAccount">Students get a login after the admin approves their admission.</p>
+    <div class="m-card m-card-sm mt-4" id="demoAccounts" hidden></div>
+    <a class="small d-inline-block mt-4" href="index.html"><i class="bi bi-arrow-left me-1" aria-hidden="true"></i><span data-i18n="login.back">Back to website</span></a>
+  </div>
+</main>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous" defer></script>
+<script type="module" src="js/pages/login.js"></script>
+</body>
+</html>

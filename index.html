@@ -1,240 +1,122 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en" data-base="">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mentora Learning Center</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Mentora Learning Centre — Tuition classes in Negombo</title>
+<meta name="description" content="Mentora Learning Centre, Negombo — tuition classes for Grades 6–13 in English and Tamil medium, online and physical.">
+<meta name="theme-color" content="#2563EB">
+<script>try{if(JSON.parse(localStorage.getItem('mentora-theme'))==='dark'){document.documentElement.dataset.theme='dark';document.documentElement.setAttribute('data-bs-theme','dark');}}catch(e){}</script>
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="assets/icons/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Noto+Sans+Tamil:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" crossorigin="anonymous">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/components.css">
 </head>
 <body>
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
-    <div class="container">
-      <a class="navbar-brand fw-bold" href="index.html"><i class="bi bi-mortarboard-fill text-primary me-2"></i>Mentora</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navContent">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navContent">
-        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-          <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="teachers.html">Teachers</a></li>
-          <li class="nav-item"><a class="nav-link" href="blog.html">Resources</a></li>
-          <li class="nav-item"><a class="nav-link" href="dashboard.html">Student Dashboard</a></li>
-        </ul>
-        <a href="#contact" class="btn btn-primary ms-lg-3">Enroll Now</a>
-      </div>
+<div id="site-header"></div>
+<main id="main" tabindex="-1">
+<section class="hero"><div class="hero-mesh" aria-hidden="true"><span></span><span></span><span></span></div><div class="hero-grid" aria-hidden="true"></div>
+<div class="container position-relative"><div class="row align-items-center g-5">
+  <div class="col-lg-6">
+    <span class="hero-badge"><span class="dot" data-i18n="home.badgeNew">New</span><span data-i18n="home.badgeText">2 free trial classes for every new student</span></span>
+    <h1><span data-i18n="home.title1">Classes that fit your child</span> <em data-i18n="home.title2">Try two for free</em></h1>
+    <p class="lead" data-i18n="home.lead">Small online and physical classes with verified teachers. Start with two free trial sessions — no admission form needed. Pay only after you decide to continue.</p>
+    <div class="hero-cta">
+      <a class="btn btn-primary btn-lg" href="courses.html"><i class="bi bi-calendar2-check" aria-hidden="true"></i><span data-i18n="home.ctaTrial">Book a free trial</span></a>
+      <a class="btn btn-ghost btn-lg" href="teachers.html"><i class="bi bi-person-badge" aria-hidden="true"></i><span data-i18n="home.ctaTeachers">Meet the teachers</span></a>
     </div>
-  </nav>
-
-  <!-- Hero Section -->
-  <header class="hero-gradient text-white py-5 py-lg-6">
-    <div class="container py-5 text-center">
-      <h1 class="display-4 fw-bold mb-3">Empowering Students to <span id="typing-text" class="gradient-text typing-cursor"></span></h1>
-      <p class="lead text-light opacity-75 mb-4 mx-auto" style="max-width: 600px;">
-        Personalized tutoring for Maths, English, Science, and ICT with proven exam results from Primary 4 to Grade 11.
-      </p>
-      <div class="d-flex justify-content-center gap-3">
-        <a href="#subjects" class="btn btn-primary btn-lg">Explore Subjects</a>
-        <a href="#pricing" class="btn btn-outline-light btn-lg">View Packages</a>
-      </div>
+    <div class="trust-row"><span><i class="bi bi-patch-check-fill" aria-hidden="true"></i><span data-i18n="home.trust1">Verified teachers</span></span><span><i class="bi bi-shield-lock-fill" aria-hidden="true"></i><span data-i18n="home.trust2">Receipts issued by the system</span></span><span><i class="bi bi-translate" aria-hidden="true"></i><span data-i18n="home.trust3">English &amp; Tamil</span></span></div>
+    <div class="stat-strip">
+      <div><div class="stat-n" id="statStudents">0</div><div class="lbl" data-i18n="home.statStudents">Active students</div></div>
+      <div><div class="stat-n" id="statClasses">0</div><div class="lbl" data-i18n="home.statClasses">Open classes</div></div>
+      <div><div class="stat-n" id="statTeachers">0</div><div class="lbl" data-i18n="home.statTeachers">Verified teachers</div></div>
+      <div><div class="stat-n accent" id="statRating">–</div><div class="lbl" data-i18n="home.statRating">Average rating</div></div>
     </div>
-  </header>
-
-  <!-- Subjects Section -->
-  <section id="subjects" class="py-5 bg-light">
-    <div class="container py-4">
-      <div class="text-center mb-5">
-        <h2 class="fw-bold">Subjects Offered</h2>
-        <p class="text-muted">Master core competencies with dedicated subject specialists</p>
-      </div>
-      <div class="row g-4">
-        <div class="col-md-6 col-lg-3">
-          <div class="card h-100 border-0 shadow-sm hover-lift text-center p-3">
-            <div class="card-body">
-              <i class="bi bi-calculator text-primary fs-1 mb-3"></i>
-              <h5 class="card-title fw-bold">Mathematics</h5>
-              <p class="card-text text-muted small">Algebra, Geometry, Trigonometry, and foundational arithmetic simplified.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-3">
-          <div class="card h-100 border-0 shadow-sm hover-lift text-center p-3">
-            <div class="card-body">
-              <i class="bi bi-book text-success fs-1 mb-3"></i>
-              <h5 class="card-title fw-bold">English</h5>
-              <p class="card-text text-muted small">Grammar, creative writing, comprehension, and literature analysis.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-3">
-          <div class="card h-100 border-0 shadow-sm hover-lift text-center p-3">
-            <div class="card-body">
-              <i class="bi bi-laptop text-info fs-1 mb-3"></i>
-              <h5 class="card-title fw-bold">ICT</h5>
-              <p class="card-text text-muted small">Computer science concepts, coding basics, and practical software skills.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-3">
-          <div class="card h-100 border-0 shadow-sm hover-lift text-center p-3">
-            <div class="card-body">
-              <i class="bi bi-radioactive text-warning fs-1 mb-3"></i>
-              <h5 class="card-title fw-bold">Science</h5>
-              <p class="card-text text-muted small">Physics, Chemistry, and Biology broken down with practical demos.</p>
-            </div>
-          </div>
-        </div>
-      </div>
+  </div>
+  <div class="col-lg-6"><div class="hero-visual" aria-hidden="true">
+    <div class="hv-card hv-rating"><div class="stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div><div class="small fw-bold mt-1" data-i18n="home.hvRating">Loved by parents</div><div class="small text-muted" data-i18n="home.hvRatingSub">Verified reviews only</div></div>
+    <div class="hv-card hv-timetable">
+      <div class="d-flex justify-content-between align-items-center mb-2 gap-2"><b data-i18n="home.hvToday">This week</b><span class="chip chip-teal" data-i18n="home.hvOnline">Online + physical</span></div>
+      <div id="hvRows"><div class="hv-row"><span class="hv-time">SAT 8:00</span><span>Mathematics · G10</span><span class="chip">EN</span></div>
+      <div class="hv-row"><span class="hv-time">SUN 2:00</span><span>ICT · G11</span><span class="chip">TA</span></div>
+      <div class="hv-row"><span class="hv-time">WED 3:30</span><span>Combined Maths · G12</span><span class="chip">TA</span></div></div>
     </div>
-  </section>
+    <div class="hv-card hv-trial"><b data-i18n="home.hvTrial">Free trial progress</b><div class="small text-muted" data-i18n="home.hvTrialSub">1 of 2 sessions attended</div><div class="trial-dots"><span class="done"></span><span></span></div></div>
+    <div class="hv-card hv-receipt"><div class="small" data-i18n="home.hvReceipt">Verified receipt</div><div class="hv-amount">LKR 2,500</div><div class="d-flex justify-content-between align-items-center"><span class="small">MR-2026-000128</span><span class="hv-ok"><i class="bi bi-check-circle-fill"></i>PAID</span></div></div>
+  </div></div>
+</div></div></section>
 
-  <!-- Grade Level Tabs -->
-  <section class="py-5">
-    <div class="container py-4">
-      <div class="text-center mb-5">
-        <h2 class="fw-bold">Curriculum by Grade Level</h2>
-        <p class="text-muted">Structured learning paths tailored to your child's stage</p>
-      </div>
-      <ul class="nav nav-pills justify-content-center mb-4" id="gradePills" role="tablist">
-        <li class="nav-item" role="presentation">
-          <button class="nav-link active" data-bs-toggle="pill" data-bs-target="#primary">Primary (Grades 4-5)</button>
-        </li>
-        <li class="nav-item" role="presentation">
-          <button class="nav-link" data-bs-toggle="pill" data-bs-target="#middle">Middle School (Grades 6-8)</button>
-        </li>
-        <li class="nav-item" role="presentation">
-          <button class="nav-link" data-bs-toggle="pill" data-bs-target="#upper">O/L Prep (Grades 9-11)</button>
-        </li>
-      </ul>
-      <div class="tab-content border rounded-3 p-4 bg-light" id="gradePillsContent">
-        <div class="tab-pane fade show active" id="primary">
-          <h4>Primary Foundation Program</h4>
-          <p class="text-muted">Focus on core literacy, numeracy, and curiosity-driven science experiments with low stress.</p>
-        </div>
-        <div class="tab-pane fade" id="middle">
-          <h4>Middle School Intermediate Program</h4>
-          <p class="text-muted">Strengthening problem-solving skills, exam writing technique, and structured homework management.</p>
-        </div>
-        <div class="tab-pane fade" id="upper">
-          <h4>Comprehensive Exam & O/L Preparation</h4>
-          <p class="text-muted">Past paper marathons, speed drills, targeted revision clinics, and mock examination series.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+<section class="section section-alt"><div class="container">
+  <div class="section-head center"><span class="eyebrow" data-i18n="home.howEyebrow">How it works</span><h2 data-i18n="home.howTitle">From first trial to paid class, step by step</h2></div>
+  <div class="steps">
+    <div class="step" data-reveal><h3 data-i18n="home.step1">Choose a class</h3><p data-i18n="home.step1p">Filter by subject, grade, medium and online or physical mode.</p></div>
+    <div class="step" data-reveal><h3 data-i18n="home.step2">Attend 2 free trials</h3><p data-i18n="home.step2p">No admission form for the trial. Just your name and WhatsApp number.</p></div>
+    <div class="step" data-reveal><h3 data-i18n="home.step3">Request admission</h3><p data-i18n="home.step3p">Fill the admission form and pay by bank transfer or cash at the centre.</p></div>
+    <div class="step" data-reveal><h3 data-i18n="home.step4">Admin approves</h3><p data-i18n="home.step4p">Once the payment is verified, the admin activates your paid enrolment and portal.</p></div>
+  </div>
+</div></section>
 
-  <!-- Testimonials Carousel -->
-  <section class="py-5 bg-light">
-    <div class="container py-4">
-      <h2 class="text-center fw-bold mb-5">What Parents & Students Say</h2>
-      <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner text-center">
-          <div class="carousel-item active">
-            <div class="mx-auto" style="max-width: 650px;">
-              <p class="fs-5 fst-italic">"My son improved his Maths grade from a C to an A in just four months. Mentora gave him his confidence back."</p>
-              <h6 class="fw-bold mb-0">Fatima R.</h6>
-              <small class="text-muted">Parent of Grade 9 Student</small>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <div class="mx-auto" style="max-width: 650px;">
-              <p class="fs-5 fst-italic">"The ICT classes are hands-on and practical. Best tutoring center we have enrolled in."</p>
-              <h6 class="fw-bold mb-0">David K.</h6>
-              <small class="text-muted">Grade 11 Student</small>
-            </div>
-          </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon bg-dark rounded-circle" aria-hidden="true"></span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
-          <span class="carousel-control-next-icon bg-dark rounded-circle" aria-hidden="true"></span>
-        </button>
-      </div>
-    </div>
-  </section>
+<section class="section"><div class="container">
+  <div class="d-flex flex-wrap justify-content-between align-items-end gap-3 section-head mw-100">
+    <div><span class="eyebrow" data-i18n="home.subjectsEyebrow">Subjects</span><h2 data-i18n="home.subjectsTitle">What we teach</h2></div>
+    <a class="btn btn-ghost" href="courses.html"><span data-i18n="common.viewAll">View all</span><i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+  </div>
+  <div class="row g-4" id="subjectGrid"><div class="col-12"><div class="skeleton skeleton-card"></div></div></div>
+</div></section>
 
-  <!-- Pricing Section -->
-  <section id="pricing" class="py-5">
-    <div class="container py-4">
-      <div class="text-center mb-5">
-        <h2 class="fw-bold">Transparent Packages</h2>
-        <p class="text-muted">Choose the right rhythm for your academic goals</p>
-      </div>
-      <div class="row g-4 justify-content-center">
-        <div class="col-md-4">
-          <div class="card h-100 shadow-sm border-0 hover-lift text-center p-3">
-            <div class="card-body">
-              <h5 class="fw-bold">Single Subject</h5>
-              <div class="my-3"><span class="fs-2 fw-bold">$45</span><span class="text-muted">/month</span></div>
-              <ul class="list-unstyled text-muted small my-4 text-start">
-                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>4 Live sessions per month</li>
-                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Weekly practice quizzes</li>
-                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Student dashboard access</li>
-              </ul>
-              <a href="#contact" class="btn btn-outline-primary w-100">Get Started</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card h-100 shadow border-primary hover-lift text-center p-3 position-relative">
-            <span class="badge bg-primary position-absolute top-0 start-50 translate-middle">Most Popular</span>
-            <div class="card-body">
-              <h5 class="fw-bold">Complete Core</h5>
-              <div class="my-3"><span class="fs-2 fw-bold">$120</span><span class="text-muted">/month</span></div>
-              <ul class="list-unstyled text-muted small my-4 text-start">
-                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>All 4 core subjects</li>
-                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Bi-weekly mock assessments</li>
-                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>1-on-1 monthly parent report</li>
-              </ul>
-              <a href="#contact" class="btn btn-primary w-100">Enroll Today</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+<section class="section section-alt"><div class="container"><div class="row g-5 align-items-center">
+  <div class="col-lg-5"><span class="eyebrow" data-i18n="home.whyEyebrow">Why Mentora</span><h2 data-i18n="home.whyTitle">Clear for parents, fair for teachers</h2><p class="text-muted" data-i18n="home.whyLead">Every payment is verified by staff and every receipt is issued by the system — so you always know exactly what you paid for.</p>
+    <a class="btn btn-primary mt-2" href="join-class.html"><span data-i18n="home.ctaJoin">Join a class</span><i class="bi bi-arrow-right" aria-hidden="true"></i></a></div>
+  <div class="col-lg-7"><div class="row g-4">
+    <div class="col-sm-6" data-reveal><div class="feature"><span class="feature-icon"><i class="bi bi-patch-check" aria-hidden="true"></i></span><div><h3 data-i18n="home.f1">Verified teachers</h3><p data-i18n="home.f1p">Qualifications are checked before a profile is published.</p></div></div></div>
+    <div class="col-sm-6" data-reveal><div class="feature"><span class="feature-icon"><i class="bi bi-translate" aria-hidden="true"></i></span><div><h3 data-i18n="home.f2">English &amp; Tamil</h3><p data-i18n="home.f2p">Classes, website and portal in both languages.</p></div></div></div>
+    <div class="col-sm-6" data-reveal><div class="feature"><span class="feature-icon"><i class="bi bi-receipt" aria-hidden="true"></i></span><div><h3 data-i18n="home.f3">Transparent fees</h3><p data-i18n="home.f3p">Monthly statements show every session and payment.</p></div></div></div>
+    <div class="col-sm-6" data-reveal><div class="feature"><span class="feature-icon"><i class="bi bi-phone" aria-hidden="true"></i></span><div><h3 data-i18n="home.f4">Works on your phone</h3><p data-i18n="home.f4p">Install the app and check classes even with weak signal.</p></div></div></div>
+  </div></div>
+</div></div></section>
 
-  <!-- Contact Form -->
-  <section id="contact" class="py-5 bg-light">
-    <div class="container py-4" style="max-width: 600px;">
-      <div class="text-center mb-4">
-        <h2 class="fw-bold">Book a Free Trial Session</h2>
-        <p class="text-muted">Leave your details and our academic counselor will contact you.</p>
-      </div>
-      <form id="contactForm" class="needs-validation" novalidate>
-        <div class="mb-3">
-          <label class="form-label">Student Name</label>
-          <input type="text" class="form-control" required placeholder="e.g. John Doe">
-          <div class="invalid-feedback">Please enter student name.</div>
-        </div>
-        <div class="mb-3">
-          <label class="form-label">Parent Email</label>
-          <input type="email" class="form-control" required placeholder="name@example.com">
-          <div class="invalid-feedback">Please enter a valid email.</div>
-        </div>
-        <div class="mb-3">
-          <label class="form-label">Grade Level</label>
-          <select class="form-select" required>
-            <option value="">Select Grade Level</option>
-            <option>Primary (Grades 4-5)</option>
-            <option>Middle (Grades 6-8)</option>
-            <option>Grade 9-11 (O/L Prep)</option>
-          </select>
-          <div class="invalid-feedback">Please select a grade level.</div>
-        </div>
-        <button type="submit" class="btn btn-primary w-100 py-2">Submit Inquiry</button>
-      </form>
-    </div>
-  </section>
+<section class="section"><div class="container">
+  <div class="d-flex flex-wrap justify-content-between align-items-end gap-3 section-head mw-100">
+    <div><span class="eyebrow" data-i18n="home.teachersEyebrow">Teachers</span><h2 data-i18n="home.teachersTitle">Meet our verified teachers</h2><p data-i18n="home.teachersLead">Experience levels, verified qualifications and real ratings from students and parents.</p></div>
+    <a class="btn btn-ghost" href="teachers.html"><span data-i18n="common.viewAll">View all</span><i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+  </div>
+  <div class="row g-4" id="teacherPreview"><div class="col-12"><div class="skeleton skeleton-card"></div></div></div>
+</div></section>
 
-  <footer class="bg-dark text-white text-center py-4">
-    <small class="text-secondary">&copy; 2026 Mentora Learning Center. All rights reserved.</small>
-  </footer>
+<section class="section section-alt" id="testimonials"><div class="container">
+  <div class="d-flex flex-wrap justify-content-between align-items-end gap-3 section-head mw-100">
+    <div><span class="eyebrow" data-i18n="home.testiEyebrow">Testimonials</span><h2 data-i18n="home.testiTitle">What students and parents say</h2><p data-i18n="home.testiLead">Every testimonial is checked by the Mentora admin before it appears here.</p></div>
+    <div class="d-flex gap-2 flex-wrap"><div class="track-nav"><button type="button" class="btn btn-ghost btn-icon" data-track="-1" data-i18n-aria="common.previous"><i class="bi bi-chevron-left" aria-hidden="true"></i></button><button type="button" class="btn btn-ghost btn-icon" data-track="1" data-i18n-aria="common.next"><i class="bi bi-chevron-right" aria-hidden="true"></i></button></div>
+    <button type="button" class="btn btn-primary" id="shareStoryBtn"><i class="bi bi-chat-heart" aria-hidden="true"></i><span data-i18n="home.testiShare">Share your experience</span></button></div>
+  </div>
+  <div class="testi-track" id="testiTrack" tabindex="0" data-i18n-aria="home.testiTitle"><div class="skeleton skeleton-card"></div></div>
+</div></section>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="main.js"></script>
+<section class="section" id="faq"><div class="container"><div class="row g-5">
+  <div class="col-lg-4"><span class="eyebrow" data-i18n="home.faqEyebrow">Questions</span><h2 data-i18n="home.faqTitle">Everything you need to know</h2><p class="text-muted" data-i18n="home.faqLead">How trials, admission, fees, the student portal and teaching at Mentora work — in plain words.</p>
+    <div class="m-card m-card-sm mt-4 d-flex gap-3 align-items-center"><span class="feature-icon"><i class="bi bi-whatsapp" aria-hidden="true"></i></span><div><b class="d-block small" data-i18n="home.faqMore">Still have a question?</b><a class="small" href="contact.html" data-i18n="home.faqContact">Contact the office</a></div></div></div>
+  <div class="col-lg-8"><div class="faq-tabs" role="tablist" id="faqTabs"></div><div class="m-accordion" id="faqList"></div></div>
+</div></div></section>
+
+<section class="section section-alt" id="survey"><div class="container"><div class="row g-5 align-items-center">
+  <div class="col-lg-5"><span class="eyebrow" data-i18n="home.surveyEyebrow">Help us improve</span><h2 data-i18n="home.surveyTitle">Tell us what you need</h2><p class="text-muted" data-i18n="home.surveyLead">Takes 1 minute. Tell us which classes, papers, recordings or ideas would help you most. You can stay anonymous.</p>
+    <ul class="list-unstyled small d-grid gap-2 mt-3 text-muted"><li><i class="bi bi-check2-circle text-success me-2" aria-hidden="true"></i><span data-i18n="home.surveyB1">We read every answer</span></li><li><i class="bi bi-check2-circle text-success me-2" aria-hidden="true"></i><span data-i18n="home.surveyB2">Most-requested papers and classes get added first</span></li><li><i class="bi bi-check2-circle text-success me-2" aria-hidden="true"></i><span data-i18n="home.surveyB3">Your contact number is optional and private</span></li></ul></div>
+  <div class="col-lg-7"><div class="survey-card" id="surveyMount"></div></div>
+</div></div></section>
+
+<section class="section pt-0 section-cta"><div class="container"><div class="cta-band"><div class="row align-items-center g-4 position-relative">
+  <div class="col-lg-8"><h2 data-i18n="home.ctaTitle">Are you a teacher? Teach with Mentora.</h2><p class="mb-0" data-i18n="home.ctaText">0% commission for your first 20 students in your first month. Online or at our Negombo centre.</p></div>
+  <div class="col-lg-4 text-lg-end"><a class="btn btn-accent btn-lg" href="teach-with-us.html"><span data-i18n="home.ctaApply">Apply to teach</span><i class="bi bi-arrow-right" aria-hidden="true"></i></a></div>
+</div></div></div></section>
+</main>
+<div id="site-footer"></div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous" defer></script>
+<script type="module" src="js/pages/home.js"></script>
 </body>
 </html>

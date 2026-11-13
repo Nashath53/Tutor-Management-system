@@ -1,0 +1,36 @@
+# Cloudflare Pages headers. Docs: https://developers.cloudflare.com/pages/configuration/headers/
+/*
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: DENY
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=()
+  Strict-Transport-Security: max-age=31536000; includeSubDomains
+  Content-Security-Policy: default-src 'self'; script-src 'self' https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com https://cdn.jsdelivr.net; img-src 'self' data: blob: https://*.supabase.co; connect-src 'self' https://*.supabase.co wss://*.supabase.co https://cdn.jsdelivr.net; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; upgrade-insecure-requests
+
+# HTML must always be revalidated so users get new versions.
+/*.html
+  Cache-Control: no-cache
+/
+  Cache-Control: no-cache
+/admin/*
+  Cache-Control: no-cache
+  X-Robots-Tag: noindex
+/portal/*
+  Cache-Control: no-cache
+  X-Robots-Tag: noindex
+
+# The service worker must never be cached by the browser/CDN.
+/sw.js
+  Cache-Control: no-store, max-age=0
+  Service-Worker-Allowed: /
+
+/manifest.webmanifest
+  Content-Type: application/manifest+json
+  Cache-Control: no-cache
+
+/css/*
+  Cache-Control: public, max-age=0, must-revalidate
+/js/*
+  Cache-Control: public, max-age=0, must-revalidate
+/assets/icons/*
+  Cache-Control: public, max-age=604800
